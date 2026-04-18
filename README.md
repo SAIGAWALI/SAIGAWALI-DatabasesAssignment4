@@ -137,33 +137,95 @@ Shard ID = MD5(member_id) mod 3
 ## 📁 Project Structure
 
 ```
-Module_B/
-├── README.md                    ← Complete documentation (you are here)
-├── REPORT_TEMPLATE.tex          ← Full technical report (LaTeX)
-├── VIDEO_DEMO_SCRIPT.tex        ← Demo script with code examples
-├── .env                         ← Sharded DB credentials (PRIVATE - not committed)
-├── .env.example                 ← Template for team members
-├── requirements.txt             ← Python dependencies
+DatabasesAssignment4/
 │
-├── app/                         ← Flask application
-│   ├── main.py                  ← Flask entry point
-│   ├── config.py                ← Configuration (loads .env)
-│   ├── sharding.py              ← Sharding functions (400+ lines)
-│   ├── sharded_db.py            ← Database abstraction (350+ lines)
-│   ├── db.py                    ← Database connections
-│   ├── auth.py, logger.py, validators.py
-│   ├── routes/
-│   │   ├── member_routes.py
-│   │   ├── patient_routes.py    ← All use ShardedDBLayer
-│   │   ├── appointment_routes.py
-│   │   └── [other routes]
-│   └── templates/ → HTML UI
+├── 📄 Core Documentation
+│   ├── README.md                         ← Complete documentation (you are here)
+│   ├── REPORT_TEMPLATE.tex              ← Full technical report (LaTeX)
+│   ├── VIDEO_DEMO_SCRIPT.tex            ← Demo script with code examples
+│   ├── ASSIGNMENT_COMPLETION_CHECKLIST.txt ← Assignment verification
+│   ├── HYBRID_SHARDING_ARCHITECTURE.md  ← Architecture deep-dive
+│   └── SHARDING_FIXES.md                ← Implementation fixes log
 │
-├── run.py                       ← Flask server launcher
-├── migrate_shards.py            ← Data migration tool (tested ✓)
-├── env_config.py                ← Configuration tester
-└── logs/                        ← Application logs
+├── 🔐 Configuration & Credentials
+│   ├── .env                             ← Sharded DB credentials (PRIVATE - not committed)
+│   ├── .env.example                     ← Template for team members
+│   ├── .gitignore                       ← Git ignore rules
+│   └── .test_seed.json                  ← Test user credentials
+│
+├── 📦 Python Application & Dependencies
+│   ├── requirements.txt                 ← Python dependencies (pip install)
+│   ├── run.py                          ← Flask server launcher
+│   ├── env_config.py                   ← Configuration tester
+│   └── app/                            ← Flask application package
+│       ├── __init__.py
+│       ├── main.py                     ← Flask entry point
+│       ├── config.py                   ← Configuration loader
+│       ├── auth.py                     ← Authentication logic
+│       ├── db.py                       ← Base DB connections
+│       ├── logger.py                   ← Logging utilities
+│       ├── validators.py               ← Input validation
+│       ├── sharding.py                 ← Sharding functions (400+ lines)
+│       ├── sharded_db.py               ← ShardedDBLayer abstraction (350+ lines)
+│       ├── routes/                     ← API endpoints
+│       │   ├── auth_routes.py          ← Authentication endpoints
+│       │   ├── member_routes.py        ← Member CRUD + portfolio
+│       │   ├── patient_routes.py       ← Patient data + appointments
+│       │   ├── doctor_routes.py        ← Doctor operations
+│       │   ├── appointment_routes.py   ← Appointment booking/management
+│       │   ├── medicine_routes.py      ← Medicine inventory
+│       │   ├── admin_routes.py         ← Admin operations
+│       │   └── __pycache__/
+│       ├── templates/                  ← HTML/CSS/JavaScript UI
+│       │   └── index.html              ← Main web interface
+│       ├── logs/                       ← Application log files
+│       └── __pycache__/
+│
+├── 🗄️ Database & Migration
+│   ├── migrate_shards.py               ← Data migration tool (migrates source → 3 shards)
+│   ├── sql/                            ← SQL schema files
+│   │   ├── dms_db.sql                  ← Original schema
+│   │   └── indexing_strategy.sql       ← Performance optimization indexes
+│   ├── seed_test_data.py               ← Test data seeding (basic)
+│   ├── seed_test_data_robust.py        ← Extended test data (v2)
+│   └── seed_medicines.py               ← Medicine inventory seeding
+│
+├── ✅ Testing & Verification
+│   ├── test_medicines.py               ← Medicine endpoint tests
+│   ├── test_medicines_api.py           ← Extended medicine API tests
+│   ├── test_appointments.py            ← Appointment routing tests
+│   ├── test_doctors.py                 ← Doctor lookup tests
+│   ├── test_concurrent.py              ← Concurrent query tests
+│   ├── test_failure_and_rollback.py    ← Failure recovery tests
+│   ├── verify_api.py                   ← API verification script
+│   └── test_results.json               ← Test execution results
+│
+├── 📊 Performance & Load Testing
+│   ├── locustfile.py                   ← Load testing scenarios
+│   ├── locust_report.html              ← Load test report
+│   ├── locust_results_stats.csv        ← Load test statistics
+│   ├── locust_results_stats_history.csv ← Historical stats
+│   ├── locust_results_failures.csv     ← Failure logs
+│   ├── locust_results_exceptions.csv   ← Exception logs
+│   ├── query_performance.png           ← Performance graphs
+│   └── test_results.json               ← Result summaries
+│
+├── 📋 Git & Version Control
+│   ├── .git/                           ← Git repository
+│   └── .gitignore                      ← Ignore patterns
+│
+└── 📂 Runtime Directories
+    └── logs/                           ← Application runtime logs
 ```
+
+**File Count Summary:**
+- Core documentation: 6 files
+- Configuration: 4 files
+- Application code: 35+ files (app/ package)
+- Database & migration: 5 files
+- Testing: 8 test files + results
+- Performance testing: 7 files
+- **Total: 65+ files and directories**
 
 ---
 
