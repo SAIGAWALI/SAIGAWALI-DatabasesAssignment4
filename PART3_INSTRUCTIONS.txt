@@ -1,0 +1,184 @@
+============================================================================
+    PART 3: RANGE QUERY SPANNING MULTIPLE SHARDS (2 minutes)
+============================================================================
+
+WHAT TO DO:
+───────────────────────────────────────────────────────────────────────
+
+Step 1: Open your terminal and run:
+  $ python part3_range_query.py
+
+Step 2: The script will display:
+  ✓ Broadcast query to all 3 shards simultaneously
+  ✓ Show members from each shard
+  ✓ Aggregate all results into complete list
+  ✓ Verify: 7+3+7 = 17 members total
+  ✓ Explain why range queries still benefit from sharding
+
+Step 3: While output is showing, speak the narration below
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+NARRATION (Speak while script outputs):
+───────────────────────────────────────────────────────────────────────
+
+[40 seconds]
+"Now let's look at a range query—requesting ALL members across the entire 
+system. Since members are distributed by hash, we don't know which shard 
+has which members without looking.
+
+The solution: BROADCAST. We send the query simultaneously to all 3 shards. 
+Each shard searches its local table and returns its members. Shard 0 has 
+7 members, Shard 1 has 3, Shard 2 has 7.
+
+The application layer collects these results and aggregates them into a 
+complete list: 17 members total, 7 plus 3 plus 7."
+
+
+[40 seconds]
+"But here's the key difference from a single database: Even though we query 
+3 shards, they run IN PARALLEL, not sequentially. So instead of taking 3x 
+longer, the time is roughly the same as a single query—because all 3 
+shards process simultaneously.
+
+Plus, each shard is working with less data—fewer rows to scan, better cache 
+hits, less lock contention. So even with the broadcast, we're still faster 
+than querying one giant table.
+
+This is the trade-off of sharding: single-shard queries are lightning fast 
+(isolated), but range queries that touch all shards are slower than they 
+would be on one server—though still competitive due to parallel processing 
+and smaller datasets."
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+EXPECTED TERMINAL OUTPUT:
+───────────────────────────────────────────────────────────────────────
+
+PART 3: RANGE QUERY SPANNING MULTIPLE SHARDS
+==========================================================================================
+
+🔍 SCENARIO: Admin requests ALL MEMBERS across entire system
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Challenge: Members are distributed across 3 shards based on their hash.
+          We can't know which shard has which members without checking.
+          
+Solution: BROADCAST the query to all shards, collect results, aggregate.
+
+🚀 Broadcasting query to all 3 shards simultaneously...
+──────────────────────────────────────────────────────────────────────────────────────────
+
+✓ Shard 0 (Port 3307):
+  Returned 7 members:
+    • Member 1: John Doe
+    • Member 4: Bob Smith
+    • Member 6: Charlie Brown
+    • Member 7: Diana Prince
+    • Member 9: Frank Wilson
+    • Member 12: Helen Clark
+    • Member 15: Ivan Black
+
+✓ Shard 1 (Port 3308):
+  Returned 3 members:
+    • Member 2: Jane Smith
+    • Member 5: Eve Johnson
+    • Member 11: Grace Lee
+
+✓ Shard 2 (Port 3309):
+  Returned 7 members:
+    • Member 3: Bob Johnson
+    • Member 8: Ella Davis
+    • Member 10: George Martin
+    • Member 13: Iris White
+    • Member 14: Jack Green
+    • Member 16: Judy Adams
+    • Member 17: Kevin Jones
+
+
+==========================================================================================
+AGGREGATION: Combining results from all shards
+==========================================================================================
+
+📋 COMPLETE MEMBER LIST (After aggregation):
+──────────────────────────────────────────────────────────────────────────────────────────
+  • Member 1 : John Doe         (From Shard 0)
+  • Member 2 : Jane Smith       (From Shard 1)
+  • Member 3 : Bob Johnson      (From Shard 2)
+  • Member 4 : Bob Smith        (From Shard 0)
+  • Member 5 : Eve Johnson      (From Shard 1)
+  • Member 6 : Charlie Brown    (From Shard 0)
+  • Member 7 : Diana Prince     (From Shard 0)
+  • Member 8 : Ella Davis       (From Shard 2)
+  • Member 9 : Frank Wilson     (From Shard 0)
+  • Member 10: George Martin    (From Shard 2)
+  • Member 11: Grace Lee        (From Shard 1)
+  • Member 12: Helen Clark      (From Shard 0)
+  • Member 13: Iris White       (From Shard 2)
+  • Member 14: Jack Green       (From Shard 2)
+  • Member 15: Ivan Black       (From Shard 0)
+  • Member 16: Judy Adams       (From Shard 2)
+  • Member 17: Kevin Jones      (From Shard 2)
+
+
+==========================================================================================
+VERIFICATION: Did we get all members?
+==========================================================================================
+
+📊 Distribution:
+  Shard 0: 7 members
+  Shard 1: 3 members
+  Shard 2: 7 members
+  ─────────────────────
+  TOTAL:   17 members
+
+✓ Verification: 7 + 3 + 7 = 17
+✅ Correct! All 17 members accounted for.
+
+
+==========================================================================================
+COST ANALYSIS: Why range queries are slower
+==========================================================================================
+
+Single-shard query (e.g., Patient 1's appointments):
+  • 1 query to 1 shard = 15-30ms
+  • FAST ✓
+
+Range query (ALL members):
+  • 3 queries to 3 shards IN PARALLEL = 15-30ms each
+  • Total time = MAX(15-30ms) not SUM (parallel execution)
+  • But must coordinate & aggregate results = +5-10ms overhead
+  • Total: ~25-40ms
+  
+Still faster than single DB (50-100ms) due to:
+  ✓ Smaller datasets per shard (less scanning)
+  ✓ Better cache locality
+  ✓ Parallel processing
+
+==========================================================================================
+✅ KEY TAKEAWAY: Range queries broadcast but still benefit from sharding
+==========================================================================================
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+VIDEO RECORDING CHECKLIST:
+───────────────────────────────────────────────────────────────────────
+
+✓ Terminal font size is readable (increase if needed)
+✓ Run command: python part3_range_query.py
+✓ Let output fully print
+✓ Speak narration at normal pace (80 seconds total)
+✓ Point at terminal showing:
+  - Broadcast queries to all 3 shards
+  - Members from each shard (7, 3, 7)
+  - Complete aggregated member list
+  - Verification: 7+3+7 = 17 ✓
+  - Cost analysis: parallel vs sequential
+
+This completes PART 3 of your video (2 minutes).
+Next: PART 4 - Scalability Trade-offs (CAP theorem, final conclusions)
+
+============================================================================

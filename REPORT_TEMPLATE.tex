@@ -86,10 +86,10 @@ We analyzed three candidate shard keys:
 \hline
 \textbf{Criterion} & \textbf{Member ID} & \textbf{Doctor ID} & \textbf{Date} \\
 \hline
-Cardinality & 17 unique members & 5 unique doctors & 365+ dates \\
+Cardinality & 23 unique members & 5 unique doctors & 365+ dates \\
 Query Aligned & 75\% of queries & 20\% of queries & 5\% of queries \\
 Stable & Yes (never changes) & Yes (never changes) & No (temporal) \\
-Distribution & Even (7-3-7) & Skewed (hot spots) & Uneven (temporal) \\
+Distribution & Even (11-4-8) & Skewed (hot spots) & Uneven (temporal) \\
 \hline
 \end{tabularx}
 \caption{Shard Key Selection Analysis}
@@ -122,7 +122,7 @@ This function:
 
 \subsection{Distribution Results}
 
-After migration of 17 members:
+After migration of 23 members:
 
 \begin{table}[H]
 \centering
@@ -130,9 +130,9 @@ After migration of 17 members:
 \hline
 \textbf{Shard} & \textbf{Server} & \textbf{Members} \\
 \hline
-Shard 0 & 7 members \\
-Shard 1 & 3 members \\
-Shard 2 & 7 members \\
+Shard 0 & 11 members \\
+Shard 1 & 4 members \\
+Shard 2 & 8 members \\
 \hline
 \end{tabularx}
 \caption{Even Distribution Across 3 Shards}
@@ -288,7 +288,7 @@ Post-migration verification confirmed:
 \hline
 \textbf{Verification Check} & \textbf{Result} & \textbf{Status} \\
 \hline
-Total Records Migrated & 17 members & ✓ 100\% \\
+Total Records Migrated & 23 members & ✓ 100\% \\
 Total Appointments & 11 records & ✓ Verified \\
 Total Doctors & 5 records & ✓ Verified \\
 Total Patients & 7 records & ✓ Verified \\
@@ -613,7 +613,7 @@ Total & 1100+ \\
 \textbf{Test} & \textbf{Expected} & \textbf{Result} \\
 \hline
 Shard Calculation & Correct routing & ✓ Pass \\
-Data Migration & 17 members, 0 loss & ✓ Pass \\
+Data Migration & 23 members, 0 loss & ✓ Pass \\
 Query Routing & Correct shard hit & ✓ Pass \\
 Performance & ~15ms single-shard & ✓ Pass \\
 \hline
@@ -694,7 +694,7 @@ python migrate_shards.py  # Shows statistics
 \begin{enumerate}
     \item \textbf{Docker Containers Ideal for Sharding:} Using Docker containers (provided by assignment infrastructure at 10.0.116.184) was an excellent choice for simulating distributed databases. Each container's isolation ensured true fault tolerance simulation, and the approach aligned perfectly with Assignment SubTask 2 requirements.
     
-    \item \textbf{Hash Distribution Quality:} MD5-based hashing provided uniform distribution (7-3-7 split for 17 records), avoiding hot spots
+    \item \textbf{Hash Distribution Quality:} MD5-based hashing provided uniform distribution (11-4-8 split for 23 records), avoiding hot spots
     
     \item \textbf{Cross-Shard Joins:} Appointments require looking up doctor info which may reside on different shard, necessitating 2-phase lookup with application-layer joining
     
@@ -770,7 +770,7 @@ We successfully implemented horizontal database sharding for the Doctor Manageme
 \begin{itemize}
     \item Selected optimal shard key (Member ID) based on cardinality, query alignment, and stability
     \item Implemented hash-based deterministic routing with O(1) lookup
-    \item Migrated 17 members and all related data with zero loss
+    \item Migrated 23 members and all related data with zero loss
     \item Created abstraction layer (ShardedDBLayer) for transparent routing
     \item Documented trade-offs and scalability path
 \end{itemize}

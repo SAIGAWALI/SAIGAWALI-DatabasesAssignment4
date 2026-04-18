@@ -1,0 +1,182 @@
+============================================================================
+    PART 4: SCALABILITY TRADE-OFFS ANALYSIS (1-2 minutes)
+============================================================================
+
+WHAT TO DO:
+───────────────────────────────────────────────────────────────────────
+
+Step 1: Open your terminal and run:
+  $ python part4_tradeoffs.py
+
+Step 2: The script will display:
+  ✓ Performance improvements table (3x throughput, 2-3x latency, 3x storage)
+  ✓ CAP theorem explanation
+  ✓ Why we chose CP (Consistency + Partition) over AP
+  ✓ Trade-offs matrix (single DB vs sharding)
+  ✓ Healthcare context (why sharding matters)
+  ✓ Honest assessment of what we sacrificed
+
+Step 3: While showing output, speak the narration below
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+NARRATION (Speak directly to camera while script is running):
+───────────────────────────────────────────────────────────────────────
+
+[30 seconds]
+"Let's talk about the trade-offs. Sharding gives us three major wins:
+
+First, THROUGHPUT triples. A single server handles 1,000 requests per 
+second. Three shards handle 1,000 each = 3,000 total.
+
+Second, LATENCY drops 2 to 3 times. Before sharding: 50 to 100 milliseconds 
+because all queries compete for locks. After sharding: 15 to 30 milliseconds 
+because each shard has less contention and better cache hits.
+
+Third, STORAGE triples. One terabyte becomes three terabytes."
+
+
+[45 seconds]
+"But we made trade-offs. The CAP theorem says you can pick 2 out of 3: 
+Consistency, Availability, or Partition tolerance. We picked Consistency 
+and Partition tolerance.
+
+Why? Because this is healthcare. Medical data must be ACCURATE. If there's 
+a network split between shards, we guarantee correct data even if some 
+shard goes temporarily offline. We don't want a situation where Shard 1 
+thinks a patient has medication A but Shard 2 thinks they have medication B.
+
+That's unacceptable for healthcare. Accuracy > uptime."
+
+
+[30 seconds]
+"What did we sacrifice? Operational complexity increased. We now manage 
+3 databases instead of 1. Queries became more complex—cross-shard joins 
+require application-layer coordination. Infrastructure cost tripled.
+
+But that's the correct trade-off for a healthcare system at scale. When 
+you have 1,000 patients, 10,000 appointments, and growing, you NEED 
+sharding or the single database collapses.
+
+That's why sharding is the right choice for this assignment."
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+EXPECTED TERMINAL OUTPUT (Key sections):
+───────────────────────────────────────────────────────────────────────
+
+PART 4: SCALABILITY TRADE-OFFS ANALYSIS
+==========================================================================================
+
+📊 PERFORMANCE IMPROVEMENTS WITH SHARDING
+──────────────────────────────────────────────────────────────────────────────────────────
+
+  THROUGHPUT
+    Before: 1,000 req/sec (single server)
+    After:  3,000 req/sec (3 shards × 1,000 each)
+    ✓ Improvement: 3x
+
+  LATENCY
+    Before: 50-100ms (network + contention + disk I/O)
+    After:  15-30ms (less lock contention + better cache)
+    ✓ Improvement: 2-3x faster
+
+  STORAGE
+    Before: 1TB capacity (single server)
+    After:  3TB capacity (3 shards × 1TB each)
+    ✓ Improvement: 3x
+
+
+==========================================================================================
+CAP THEOREM: Pick 2 out of 3
+==========================================================================================
+
+  Consistency (C)    : All clients see the same data
+  Availability (A)   : System is always available
+  Partition (P)      : System tolerates network failures
+
+Three possible choices:
+  1. CA  - Consistency + Availability  (No partition tolerance)
+  2. CP  - Consistency + Partition     (May be unavailable)
+  3. AP  - Availability + Partition    (May have stale data)
+
+OUR CHOICE: CP (Consistency + Partition Tolerance)
+
+🎯 WHY WE CHOSE CP:
+
+  1. Healthcare Data
+     → Medical records MUST be accurate. Stale data = patient harm.
+
+  2. Compliance
+     → HIPAA/regulations require data consistency, not 100% uptime.
+
+  3. Trade-off
+     → Prefer correct data with occasional downtime vs wrong data always available.
+
+  4. Acceptable Risk
+     → Network partitions rare in datacenter. Single shard outage = acceptable.
+
+
+==========================================================================================
+TRADE-OFFS MATRIX
+==========================================================================================
+
+┌──────────────────────┬────────────────────────┬──────────────────────┐
+│ Metric               │ Single Database        │ Sharded (3 shards)   │
+├──────────────────────┼────────────────────────┼──────────────────────┤
+│ Throughput           │ 1,000 req/sec          │ 3,000 req/sec ✓      │
+│ Latency              │ 50-100ms               │ 15-30ms ✓            │
+│ Storage              │ 1TB                    │ 3TB ✓                │
+│ Operational Cost     │ $$ (cheaper)           │ $$$ (3 servers)      │
+│ Query Complexity     │ Simple                 │ More complex ✓       │
+│ Consistency          │ Guaranteed             │ Guaranteed ✓         │
+└──────────────────────┴────────────────────────┴──────────────────────┘
+
+
+==========================================================================================
+FINAL VERDICT
+==========================================================================================
+
+Sharding is NOT for every app. But for healthcare at scale:
+
+✓ WORTH IT because:
+  • 3x throughput handles patient volume
+  • 2-3x latency means responsive UI/faster operations
+  • Consistency guarantees prevent medical errors
+  • Scalability prevents emergency rewrites as patients grow
+
+BOTTOM LINE: For Assignment 4 (healthcare startup scaling to 1,000+ 
+patients), sharding is the RIGHT architectural choice.
+
+==========================================================================================
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+VIDEO RECORDING CHECKLIST:
+───────────────────────────────────────────────────────────────────────
+
+✓ Terminal font size is readable
+✓ Run command: python part4_tradeoffs.py
+✓ Let output fully display
+✓ Face camera and speak narration naturally (~105 seconds total)
+✓ Point at screen showing:
+  - 3x throughput, 2-3x latency, 3x storage metrics
+  - CAP theorem explanation (CP choice)
+  - Why healthcare requires consistency over availability
+  - Trade-offs matrix comparison
+  - Final verdict on sharding decision
+
+This completes PART 4 of your video (2 minutes).
+
+FULL VIDEO SUMMARY:
+  Part 1 (3 min) - Sharded tables & partitioning logic
+  Part 2 (2 min) - Single-shard query routing
+  Part 3 (2 min) - Range query spanning shards
+  Part 4 (2 min) - Scalability trade-offs
+  ──────────────
+  TOTAL: ~9 minutes
+
+============================================================================

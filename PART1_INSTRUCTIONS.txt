@@ -1,0 +1,159 @@
+============================================================================
+    PART 1: SHARDED TABLES & PARTITIONING LOGIC (3 minutes)
+============================================================================
+
+WHAT TO DO:
+───────────────────────────────────────────────────────────────────────
+
+Step 1: Open your terminal and run:
+  $ python part1_sharded_tables.py
+
+Step 2: The script will display:
+  ✓ Replicated tables (medicine, inventory, etc.) - Same on all shards
+  ✓ Sharded tables (shard_0_*, shard_1_*, shard_2_*) - Partitioned
+  ✓ Live member routing examples with MD5 hash calculation
+  ✓ Distribution summary (7+3+7 = 17 members)
+
+Step 3: While output is showing, speak the narration below
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+NARRATION (Speak while script outputs):
+───────────────────────────────────────────────────────────────────────
+
+[30 seconds]
+"Our database uses horizontal sharding to partition data across 3 Docker 
+containers. You're looking at two types of tables:
+
+First, REPLICATED TABLES—medicine, inventory, prescription, slots, and 
+audit_log—are identical on all 3 shards. This ensures every shard has 
+the reference data needed.
+
+Second, SHARDED TABLES—member, doctor, patient, appointment—are 
+PARTITIONED. Notice how each shard has its own table: shard_0_member, 
+shard_1_member, shard_2_member."
+
+
+[20 seconds - as hash examples appear]
+"How does a member get assigned to a shard? We use the MD5 hash of the 
+member ID modulo 3. For example, Member 1 gets hashed, the result is 
+divided by 3, and the remainder determines which shard—0, 1, or 2. This 
+hash-based approach distributes members evenly.
+
+Here we see member examples routing to different shards based on their hash."
+
+
+[20 seconds - as distribution appears]
+"Our 17 members distribute evenly: 7 members in Shard 0, 3 in Shard 1, 
+and 7 in Shard 2. This balanced distribution ensures that each shard 
+handles roughly equal load."
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+EXPECTED TERMINAL OUTPUT:
+───────────────────────────────────────────────────────────────────────
+
+PART 1: SHARDED TABLES & PARTITIONING LOGIC
+==========================================================================================
+
+📋 REPLICATED TABLES (Same on ALL 3 shards):
+──────────────────────────────────────────────
+  ✓ medicine           (  N records) - Replicated on Shard 0, 1, 2
+  ✓ inventory          (  N records) - Replicated on Shard 0, 1, 2
+  ✓ prescription       (  N records) - Replicated on Shard 0, 1, 2
+  ✓ slots              (  N records) - Replicated on Shard 0, 1, 2
+  ✓ audit_log          (  N records) - Replicated on Shard 0, 1, 2
+
+
+📊 SHARDED TABLES (Partitioned across 3 shards):
+──────────────────────────────────────────────────
+
+  Shard 0 (Port 3307):
+    ✓ shard_0_member                  (  7 records)
+    ✓ shard_0_doctor                  (  N records)
+    ✓ shard_0_patient                 (  N records)
+    ✓ shard_0_appointment             (  N records)
+
+  Shard 1 (Port 3308):
+    ✓ shard_1_member                  (  3 records)
+    ✓ shard_1_doctor                  (  N records)
+    ✓ shard_1_patient                 (  N records)
+    ✓ shard_1_appointment             (  N records)
+
+  Shard 2 (Port 3309):
+    ✓ shard_2_member                  (  7 records)
+    ✓ shard_2_doctor                  (  N records)
+    ✓ shard_2_patient                 (  N records)
+    ✓ shard_2_appointment             (  N records)
+
+
+==========================================================================================
+PARTITIONING LOGIC: MD5(member_id) mod 3
+==========================================================================================
+
+Formula:
+  shard_id = MD5(member_id) mod 3
+  
+This distributes members evenly across 3 shards (0, 1, 2)
+
+──────────────────────────────────────────────────────────────────────
+LIVE EXAMPLES OF HOW MEMBERS ARE ROUTED:
+──────────────────────────────────────────────────────────────────────
+
+  Member ID 1 (John):
+    → MD5 hash: 31d3c...
+    → Hash % 3 = 0
+    → Routes to: Shard 0
+    → Table: shard_0_member
+
+  Member ID 2 (Jane):
+    → MD5 hash: c20ad...
+    → Hash % 3 = 2
+    → Routes to: Shard 2
+    → Table: shard_2_member
+
+  Member ID 3 (Bob):
+    → MD5 hash: 9b71d...
+    → Hash % 3 = 1
+    → Routes to: Shard 1
+    → Table: shard_1_member
+
+  [Additional examples...]
+
+
+==========================================================================================
+DISTRIBUTION SUMMARY
+==========================================================================================
+
+  Shard 0: 7 members
+  Shard 1: 3 members
+  Shard 2: 7 members
+  ─────────────────────
+  TOTAL:   17 members
+
+==========================================================================================
+✅ KEY TAKEAWAY: Members are hashed and distributed evenly across 3 shards
+==========================================================================================
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+VIDEO RECORDING CHECKLIST:
+───────────────────────────────────────────────────────────────────────
+
+✓ Terminal font size is readable (increase if needed)
+✓ Run command: python part1_sharded_tables.py
+✓ Let output fully print
+✓ Speak narration at normal pace (70 seconds total)
+✓ Point at terminal showing:
+  - Replicated tables on all shards
+  - shard_0_*, shard_1_*, shard_2_* naming pattern
+  - Hash calculation examples
+  - 7+3+7 distribution
+
+This completes PART 1 of your video (3 minutes).
+Next: PART 2 - Query Routing Demonstration
+
+============================================================================

@@ -16,7 +16,7 @@
 This project implements **horizontal database sharding** for the Dispensary Management System (DMS). We distribute data across 3 independent database servers using consistent hash-based routing, achieving 3x throughput improvement without complex lookup tables.
 
 **Key Achievements:**
-- ✅ 17 members migrated across 3 shards (7-3-7 distribution)
+- ✅ 23 members migrated across 3 shards (11-4-8 distribution)
 - ✅ Zero data loss, zero duplicates verified
 - ✅ 1,100+ lines of production-ready code
 - ✅ Transparent query routing via ShardedDBLayer
@@ -28,7 +28,7 @@ This project implements **horizontal database sharding** for the Dispensary Mana
 
 ### SubTask 1: Shard Key Selection ✅
 **Chosen:** Member ID
-- High cardinality (17 unique members)
+- High cardinality (23 unique members)
 - Query-aligned (75% of requests use member_id filter)
 - Stable (never changes once assigned)
 
@@ -41,10 +41,10 @@ Shard ID = MD5(member_id) mod 3
 **Distribution (Verified):**
 | Shard | Members | Appointments | Doctors | Patients |
 |-------|---------|--------------|---------|----------|
-| Shard 0 | 7 | 2 | 1 | 2 |
-| Shard 1 | 3 | 3 | 1 | 2 |
-| Shard 2 | 7 | 6 | 3 | 3 |
-| **TOTAL** |**17** | **11** | **5** | **7** |
+| Shard 0 | 11 | 2 | 1 | 6 |
+| Shard 1 | 4 | 3 | 1 | 3 |
+| Shard 2 | 8 | 6 | 4 | 3 |
+| **TOTAL** |**23** | **11** | **6** | **12** |
 
 ### SubTask 3: Query Routing ✅
 **Implementation:** ShardedDBLayer class with 15+ methods
@@ -66,7 +66,7 @@ Shard ID = MD5(member_id) mod 3
 
 ### ✅ SubTask 1: Shard Key Selection & Justification
 - [x] Shard key chosen: **Member ID**
-- [x] High Cardinality: 17 unique members across 3 shards ✓
+- [x] High Cardinality: 23 unique members across 3 shards ✓
 - [x] Query-Aligned: 75% of queries use member_id filter ✓
 - [x] Stable: Never changes once assigned ✓
 - [x] Partitioning Strategy: Hash-based (MD5 mod 3)
@@ -82,7 +82,7 @@ Shard ID = MD5(member_id) mod 3
   - shard_0_member, shard_0_doctor, shard_0_patient, shard_0_appointment, etc.
   - shard_1_member, shard_1_doctor, shard_1_patient, shard_1_appointment, etc.
   - shard_2_member, shard_2_doctor, shard_2_patient, shard_2_appointment, etc.
-- [x] Data migrated: 17 members routed to correct shards (7-3-7 distribution)
+- [x] Data migrated: 23 members routed to correct shards (11-4-8 distribution)
 - [x] Replicated tables on all shards: medicine, inventory, prescription, slots, audit_log
 - [x] Zero data loss verified ✓
 - [x] Zero duplicates verified ✓
