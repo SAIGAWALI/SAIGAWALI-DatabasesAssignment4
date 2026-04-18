@@ -44,7 +44,7 @@ Shard ID = MD5(member_id) mod 3
 | Shard 0 | 7 | 2 | 1 | 2 |
 | Shard 1 | 3 | 3 | 1 | 2 |
 | Shard 2 | 7 | 6 | 3 | 3 |
-| **TOTAL** | — | **17** | **11** | **5** | **7** |
+| **TOTAL** |**17** | **11** | **5** | **7** |
 
 ### SubTask 3: Query Routing ✅
 **Implementation:** ShardedDBLayer class with 15+ methods
