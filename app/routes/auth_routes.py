@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 try:
     from ..db import get_db_connection, get_sharded_db_layer
     from ..auth import encode_token, token_required, admin_required
-    from ..logger import get_recent_logs
+    from ..logger import get_recent_logs, log_action
     from ..validators import (
         ALLOWED_GENDERS,
         clean_string,
@@ -15,7 +15,7 @@ try:
 except ImportError:
     from db import get_db_connection, get_sharded_db_layer
     from auth import encode_token, token_required, admin_required
-    from logger import get_recent_logs
+    from logger import get_recent_logs, log_action
     from validators import (
         ALLOWED_GENDERS,
         clean_string,
@@ -48,55 +48,29 @@ def login():
     if not username or not password:
         return jsonify({"error": "Missing parameters"}), 401
 
-    sharded_db = get_sharded_db_layer()
+    # HYBRID: Search for user in LOCAL DB only (not shards)
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
     
-    # Search for user across all shards
-    user = None
     try:
-        try:
-            from ..sharding import NUM_SHARDS, get_shard_connection, get_shard_table_name
-            from ..config import get_shard_settings
-        except ImportError:
-            from sharding import NUM_SHARDS, get_shard_connection, get_shard_table_name
-            from config import get_shard_settings
-        
-        settings = get_shard_settings()
-        
-        for shard_id in range(NUM_SHARDS):
-            try:
-                conn = get_shard_connection(shard_id, settings["user"], settings["password"], settings["database"])
-                cursor = conn.cursor(dictionary=True)
-                table_name = get_shard_table_name('users', shard_id)
-                cursor.execute("SELECT * FROM {} WHERE username = %s".format(table_name), (username,))
-                user = cursor.fetchone()
-                cursor.close()
-                conn.close()
-                if user:
-                    break
-            except Exception as e:
-                continue
+        cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
+        user = cursor.fetchone()
+        cursor.close()
+        conn.close()
     except Exception as e:
         return jsonify({"error": "Authentication service error"}), 500
     
     if not user or not bcrypt.checkpw(password.encode('utf-8'), user['password_hash'].encode('utf-8')):
         return jsonify({"error": "Invalid credentials"}), 401
-
-    member_type = 'User'
-    doctor_id = None
-    patient_id = None
-
-    member = sharded_db.get_member_by_id(user['member_id'])
-    if member:
-        member_type = member.get('member_type', 'User')
-
+    
+    # Generate JWT token
     token = encode_token(
-        user['username'],
-        user.get('role', 'user'),
-        user['member_id'],
-        patient_id=patient_id,
-        member_type=member_type,
-        doctor_id=doctor_id,
+        username=user['username'],
+        role=user['role'],
+        member_id=user['member_id']
     )
+    
+    log_action(user['username'], "LOGIN")
     return jsonify({
         "message": "Login successful",
         "session_token": token

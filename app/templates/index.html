@@ -786,7 +786,8 @@ async function loadDoctors() {
   const sel = $('b-doctor');
   sel.innerHTML = '<option value="">— choose a doctor —</option>';
   (data.doctors||[]).forEach(d => {
-    sel.innerHTML += `<option value="${d.doctor_id}">${d.name} — ${d.specialization} (₹${d.consultation_fee})</option>`;
+    const docName = d.doctor_name || d.name || `Doctor ${d.doctor_id}`;
+    sel.innerHTML += `<option value="${d.doctor_id}">${docName} — ${d.specialization} (₹${d.consultation_fee})</option>`;
   });
 }
 async function loadSlots() {

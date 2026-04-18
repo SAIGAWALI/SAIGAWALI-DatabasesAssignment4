@@ -1,1400 +1,1400 @@
 [
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=9 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384621.9080212
+    "status": 404,
+    "extra": "thread=9 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507428.894818
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=5 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.1110668
+    "status": 404,
+    "extra": "thread=2 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507428.9930956
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=10 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.1427894
+    "status": 404,
+    "extra": "thread=13 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0186362
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=4 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.4117808
+    "status": 404,
+    "extra": "thread=6 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0409253
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=3 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.4784865
+    "status": 404,
+    "extra": "thread=12 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.048714
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=11 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.4876378
+    "status": 404,
+    "extra": "thread=10 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0509946
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=7 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.501743
+    "status": 404,
+    "extra": "thread=3 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0535984
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=14 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.516997
+    "status": 404,
+    "extra": "thread=1 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0674262
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=6 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.5240602
+    "status": 404,
+    "extra": "thread=5 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.074902
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=1 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.5323155
+    "status": 404,
+    "extra": "thread=8 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.074902
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=12 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.534951
+    "status": 404,
+    "extra": "thread=11 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0913172
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=13 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.5407956
+    "status": 404,
+    "extra": "thread=4 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.0930777
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=2 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.5492353
+    "status": 404,
+    "extra": "thread=7 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.1007118
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=0 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.563397
+    "status": 404,
+    "extra": "thread=14 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.1007118
   },
   {
     "test": "race_condition_booking",
-    "status": 409,
-    "extra": "thread=8 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
-    "ts": 1775384622.5726397
+    "status": 404,
+    "extra": "thread=0 body={\n  \"error\": \"Patient not found\"\n}\n",
+    "ts": 1776507429.1109226
   },
   {
     "test": "concurrent_member_create",
     "status": 400,
-    "extra": "thread=4 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
+    "extra": "thread=5 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.490886
   },
   {
     "test": "concurrent_member_create",
     "status": 400,
-    "extra": "thread=7 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
-  },
-  {
-    "test": "concurrent_member_create",
-    "status": 400,
-    "extra": "thread=0 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
-  },
-  {
-    "test": "concurrent_member_create",
-    "status": 400,
-    "extra": "thread=1 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
-  },
-  {
-    "test": "concurrent_member_create",
-    "status": 400,
-    "extra": "thread=3 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
-  },
-  {
-    "test": "concurrent_member_create",
-    "status": 400,
-    "extra": "thread=2 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.7585196
-  },
-  {
-    "test": "concurrent_member_create",
-    "status": 400,
-    "extra": "thread=9 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.773605
+    "extra": "thread=9 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.5464966
   },
   {
     "test": "concurrent_member_create",
     "status": 201,
-    "extra": "thread=6 user=concuser_1775384622 body={\n  \"member_id\": 76,\n  \"message\": \"Member created successfully\"\n}\n",
-    "ts": 1775384625.773605
+    "extra": "thread=8 user=concuser_1776507429 body={\n  \"member_id\": 24,\n  \"message\": \"Member created successfully (hybrid: local + sharded)\"\n}\n",
+    "ts": 1776507431.6786354
   },
   {
     "test": "concurrent_member_create",
     "status": 400,
-    "extra": "thread=5 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.8451736
+    "extra": "thread=7 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.688801
   },
   {
     "test": "concurrent_member_create",
     "status": 400,
-    "extra": "thread=8 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
-    "ts": 1775384625.860876
+    "extra": "thread=1 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.6904814
   },
   {
-    "test": "isolation_portfolio",
-    "status": 403,
-    "extra": "patient1 accessing patient2 portfolio: {\n  \"error\": \"Access denied\"\n}\n",
-    "ts": 1775384628.0012267
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=2 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.6949222
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=6 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.7008076
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=3 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.7008076
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=0 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.7082884
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=4 user=concuser_1776507429 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1776507429' for key 'users.username'\"\n}\n",
+    "ts": 1776507431.7082884
+  },
+  {
+    "test": "isolation_skipped",
+    "status": 0,
+    "extra": "token1=False token2=False patient2_member_id=None",
+    "ts": 1776507431.7082884
   },
   {
     "test": "failure_simulation",
     "status": 400,
     "extra": "missing_fields_add_member: {\n  \"error\": \"Missing required fields\"\n}\n",
-    "ts": 1775384630.0622547
+    "ts": 1776507433.7741857
   },
   {
     "test": "failure_simulation",
     "status": 400,
     "extra": "invalid_age_add_member: {\n  \"error\": \"Age must be between 1 and 120\"\n}\n",
-    "ts": 1775384632.1145961
+    "ts": 1776507435.8227413
   },
   {
     "test": "failure_simulation",
     "status": 400,
     "extra": "bad_medicine_missing: {\n  \"error\": \"Missing required fields\"\n}\n",
-    "ts": 1775384634.1511064
+    "ts": 1776507437.8652434
   },
   {
     "test": "failure_simulation",
     "status": 400,
     "extra": "appointment_missing_fields: {\n  \"error\": \"Missing required fields\"\n}\n",
-    "ts": 1775384636.1663954
+    "ts": 1776507439.890081
   },
   {
     "test": "rollback_first_insert",
     "status": 201,
-    "extra": "{\n  \"member_id\": 86,\n  \"message\": \"Member created successfully\"\n}\n",
-    "ts": 1775384638.6227725
+    "extra": "{\n  \"member_id\": 33,\n  \"message\": \"Member created successfully (hybrid: local + sharded)\"\n}\n",
+    "ts": 1776507442.2718623
   },
   {
     "test": "rollback_dup_insert",
-    "status": 409,
-    "extra": "{\n  \"error\": \"Email already registered\"\n}\n",
-    "ts": 1775384642.878666
+    "status": 400,
+    "extra": "{\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'rollback_1776507439@test.com' ",
+    "ts": 1776507446.7389205
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.5996768
+    "ts": 1776507452.5124598
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.619873
+    "ts": 1776507452.5161953
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.7192235
+    "ts": 1776507452.7465181
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.7384815
+    "ts": 1776507452.7547674
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.7384815
+    "ts": 1776507452.923649
   },
   {
     "test": "stress_get_medicines",
     "status": 200,
     "extra": "",
-    "ts": 1775384647.8412175
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384647.9141097
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384647.9190626
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384647.9885461
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.0540617
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.1147728
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.1355662
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.362395
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.4127836
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.5214176
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.586056
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.586056
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.8838284
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384648.98392
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.0884566
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.145092
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.17072
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.1966133
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.2216706
+    "ts": 1776507452.9804864
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480D058>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1837435
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480D970>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F29670>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F482F8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F35D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F35790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F48868>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.1921852
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F18328>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2005253
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2699053
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x17F298C8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2126853
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.2504914
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1CA45790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.254247
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1FF3F190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.254247
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2AF2C8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.254247
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1FF3F700>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.255275
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1CA61BF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.255275
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2BD3A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.255605
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2BDEF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.255605
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E291988>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2560031
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2BD5F8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2560031
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E282AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2560031
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.2856746
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2AFE08>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2563603
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2AF868>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2563603
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E291EF8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2563603
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2A3CD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2563603
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1CA31FA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2713678
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2A3190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2713678
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1CA316B8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2713678
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1CA45538>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2713678
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E2A3748>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2713678
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E282520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2792711
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1E282D00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))",
+    "ts": 1776507453.2800229
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.4843438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.5376225
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.5463276
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.8967805
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507453.9734108
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.1031022
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.1392298
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.32897
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.3716254
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.3810568
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.4878936
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.5718584
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507454.7542744
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.1463223
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.27006
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.3705773
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.521146
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.7299721
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507455.7552204
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.140338
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.2454898
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.4037325
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.528171
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.769803
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507456.8048224
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507457.1388621
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507457.2636948
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507457.2725766
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507457.2725766
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507458.0379488
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507458.3216486
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507458.381228
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507458.8622153
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507458.963013
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.0123324
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.0873244
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.1003983
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.1304014
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.8548532
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507459.9529705
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.1686745
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.2529159
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.2529159
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.274568
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.4126577
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.5033078
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.5033078
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.663041
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.894054
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1776507460.8966842
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0383925
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0383925
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0383925
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0383925
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0535433
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0535433
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0535433
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0535433
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0535433
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0616224
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0616224
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0695944
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3014438
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0856771
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0856771
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.086311
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0938568
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0938568
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0938568
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0946088
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0946088
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.0946088
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.094938
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.094938
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.094938
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.094938
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.102065
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
     "status": -1,
-    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
-    "ts": 1775384649.3170571
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.383697
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.4872804
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1106722
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.5275683
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1119955
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.5997195
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1119955
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.624991
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1189654
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.7107992
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1189654
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.790996
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.119635
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.8195977
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.119635
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.8440366
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.119635
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384649.892322
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.119635
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.0614355
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.128472
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.0728757
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.128472
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.1523862
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.128472
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.220598
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1289072
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.3883164
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.4145896
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.422747
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.4406664
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.5350382
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.586028
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1365774
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.6151597
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.153555
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.6496549
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.153555
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.6601055
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1615841
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.757335
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1615841
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384650.8997712
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1615841
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.0032508
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.1537814
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.2610922
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.2692213
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.3660955
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.4074583
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.4074583
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.457428
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.4948199
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.497328
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.6235402
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.7216473
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.8504782
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.8900678
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384651.8900678
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.1283915
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.2175896
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.267243
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.333797
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.4108684
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.5108085
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.553105
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.7195106
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.7526362
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1631732
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.7526362
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1868272
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384652.8572152
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507461.1868272
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.0144928
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.0294921
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.0294921
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.0460136
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.0717292
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.2949247
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.3616123
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.509773
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.744254
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384653.832206
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.0440848
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.0463765
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7198372
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.0859714
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.1950774
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.2017572
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.3254218
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.328156
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.328156
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.3336995
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.366568
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.4082277
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.721879
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.4113443
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.4440076
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.5728335
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384654.9311144
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.0765388
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.121273
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.1779418
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.227667
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.3272498
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7363958
   },
   {
     "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.3272498
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.359178
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.359178
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.3751519
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.5748956
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.5782526
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.5782526
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.8578072
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.9247355
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.9247355
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.9612336
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.9668696
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384655.9998622
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.064651
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.1384144
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.1982727
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.2440004
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.2724
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.3019166
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.6107306
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.734335
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.734335
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.7875047
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.8759122
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.9001577
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384656.9333298
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.010655
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.1042972
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.166592
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.1762252
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.1762252
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.1820774
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.184711
-  },
-  {
-    "test": "stress_get_medicines",
-    "status": 200,
-    "extra": "",
-    "ts": 1775384657.184711
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)",
+    "ts": 1776507462.7611701
   },
   {
     "test": "stress_get_medicines_threshold",
     "status": 0,
-    "extra": "success_rate=69.5 threshold=85",
-    "ts": 1775384657.184711
+    "extra": "success_rate=28.5 threshold=85",
+    "ts": 1776507462.7611701
   }
 ]

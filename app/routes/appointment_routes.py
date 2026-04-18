@@ -33,9 +33,94 @@ def _serialize_appointments(appointments):
 @token_required
 def get_appointments():
     sharded_db = get_sharded_db_layer()
-    appointments = sharded_db.get_all_appointments()
-    _serialize_appointments(appointments)
-    return jsonify({"appointments": appointments}), 200
+    appointments = []
+    try:
+        # Get all appointments from all shards with patient info
+        from ..sharding import NUM_SHARDS, get_shard_connection, get_shard_table_name
+        from ..config import get_shard_settings
+        
+        settings = get_shard_settings()
+        
+        # Step 1: Get all appointments from all shards
+        for shard_id in range(NUM_SHARDS):
+            try:
+                conn = get_shard_connection(shard_id, settings["user"], settings["password"], settings["database"])
+                cursor = conn.cursor(dictionary=True)
+                cursor.execute(f"""
+                    SELECT 
+                        a.appointment_id, a.appointment_date, a.appointment_time,
+                        a.doctor_id, a.patient_id, a.slot_id, a.patient_member_id,
+                        p.member_id as patient_member_id,
+                        pm.name as patient_name
+                    FROM {get_shard_table_name('appointment', shard_id)} a
+                    LEFT JOIN {get_shard_table_name('patient', shard_id)} p ON a.patient_id = p.patient_id
+                    LEFT JOIN {get_shard_table_name('member', shard_id)} pm ON p.member_id = pm.member_id
+                """)
+                shard_appointments = cursor.fetchall()
+                appointments.extend(shard_appointments)
+                cursor.close()
+                conn.close()
+            except Exception as e:
+                print(f"Warning: Error fetching appointments from shard {shard_id}: {str(e)}")
+        
+        # Step 2: Look up doctor names from doctor table (might be in different shard)
+        for appt in appointments:
+            if appt.get('doctor_id'):
+                try:
+                    # First try to find doctor in same shard
+                    conn = get_shard_connection(
+                        list(range(NUM_SHARDS))[0],  # Start with shard 0
+                        settings["user"], 
+                        settings["password"], 
+                        settings["database"]
+                    )
+                    cursor = conn.cursor(dictionary=True)
+                    
+                    # Search all shards for the doctor
+                    doctor_found = False
+                    for search_shard_id in range(NUM_SHARDS):
+                        try:
+                            search_conn = get_shard_connection(
+                                search_shard_id,
+                                settings["user"],
+                                settings["password"],
+                                settings["database"]
+                            )
+                            search_cursor = search_conn.cursor(dictionary=True)
+                            search_cursor.execute(f"""
+                                SELECT 
+                                    d.doctor_id, d.member_id,
+                                    m.name as doctor_name
+                                FROM {get_shard_table_name('doctor', search_shard_id)} d
+                                LEFT JOIN {get_shard_table_name('member', search_shard_id)} m ON d.member_id = m.member_id
+                                WHERE d.doctor_id = %s
+                            """, (appt['doctor_id'],))
+                            doctor = search_cursor.fetchone()
+                            search_cursor.close()
+                            search_conn.close()
+                            
+                            if doctor and doctor.get('doctor_name'):
+                                appt['doctor_name'] = doctor['doctor_name']
+                                doctor_found = True
+                                break
+                        except:
+                            pass
+                    
+                    if not doctor_found:
+                        appt['doctor_name'] = f"Doctor ID {appt['doctor_id']}"
+                    
+                    cursor.close()
+                    conn.close()
+                except Exception as e:
+                    print(f"Warning: Could not fetch doctor name for doctor_id {appt.get('doctor_id')}: {str(e)}")
+                    appt['doctor_name'] = f"Doctor ID {appt['doctor_id']}"
+            else:
+                appt['doctor_name'] = "Unknown Doctor"
+        
+        _serialize_appointments(appointments)
+        return jsonify({"appointments": appointments}), 200
+    except Exception as e:
+        return jsonify({"error": f"Failed to fetch appointments: {str(e)}"}), 400
 
 
 @appointment_bp.route('/appointments/<int:id>', methods=['GET'])

@@ -19,10 +19,19 @@ def get_portfolio(id):
         log_action(request.user['username'], f"UNAUTHORIZED ACCESS ATTEMPT: Portfolio {id}")
         return jsonify({"error": "Access denied"}), 403
 
-    sharded_db = get_sharded_db_layer()
-    member = sharded_db.get_member_by_id(id)
-
-    if not member:
-        return jsonify({"error": "Member not found"}), 404
-
-    return jsonify({"member": member}), 200
+    # HYBRID: Get basic member info from LOCAL DB
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+    
+    try:
+        cursor.execute("SELECT * FROM member WHERE member_id = %s", (id,))
+        member = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        
+        if not member:
+            return jsonify({"error": "Member not found"}), 404
+        
+        return jsonify({"member": member}), 200
+    except Exception as e:
+        return jsonify({"error": f"Failed to fetch member: {str(e)}"}), 400

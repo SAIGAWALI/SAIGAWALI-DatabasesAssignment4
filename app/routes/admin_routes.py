@@ -155,28 +155,128 @@ def add_member():
     username = clean_string(data.get('username'))
     member_type = clean_string(data.get('member_type'))
     role = clean_string(data.get('role'))
+    age = int(data.get('age'))
+    email = clean_string(data.get('email'))
+    contact_no = clean_string(data.get('contact_no'))
+    password = data.get('password')
 
-    # For sharded architecture, simulate member creation
-    # In production, would distribute across shards based on sharding key
+    # HYBRID: Insert to LOCAL DB first, then route sharded data to remote shards
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
     try:
+        password_hash = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        
+        # Step 1: Insert to LOCAL DB (member + users)
+        cursor.execute(
+            "INSERT INTO member (name, age, email, contact_no, image, member_type) VALUES (%s, %s, %s, %s, %s, %s)",
+            (name, age, email, contact_no, '', member_type)
+        )
+        conn.commit()
+        member_id = cursor.lastrowid
+        
+        # Insert user to LOCAL DB
+        cursor.execute(
+            "INSERT INTO users (member_id, username, password_hash, role) VALUES (%s, %s, %s, %s)",
+            (member_id, username, password_hash, role)
+        )
+        conn.commit()
+        
+        # Step 2: Route sharded data to REMOTE SHARDS
+        try:
+            from ..sharding import get_shard_connection, get_shard_table_name, get_shard_id
+            from ..config import get_shard_settings
+        except ImportError:
+            from sharding import get_shard_connection, get_shard_table_name, get_shard_id
+            from config import get_shard_settings
+        
+        shard_id = get_shard_id(member_id)
+        settings = get_shard_settings()
+        shard_conn = get_shard_connection(shard_id, settings["user"], settings["password"], settings["database"])
+        shard_cursor = shard_conn.cursor()
+        
+        # Insert member to shard
+        shard_cursor.execute(f"""
+            INSERT INTO {get_shard_table_name('member', shard_id)} 
+            (member_id, name, age, email, contact_no, image, member_type)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (member_id, name, age, email, contact_no, '', member_type))
+        shard_conn.commit()
+        
+        # Insert user to shard
+        shard_cursor.execute(f"""
+            INSERT INTO {get_shard_table_name('users', shard_id)} 
+            (member_id, username, password_hash, role)
+            VALUES (%s, %s, %s, %s)
+        """, (member_id, username, password_hash, role))
+        shard_conn.commit()
+        
+        # Add member-specific sharded data
+        if member_type == 'Doctor':
+            shard_cursor.execute(f"""
+                INSERT INTO {get_shard_table_name('doctor', shard_id)} 
+                (specialization, qualification, consultation_fee, salary, shift, member_id)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                clean_string(data.get('specialization')),
+                clean_string(data.get('qualification')),
+                int(data.get('consultation_fee')),
+                int(data.get('salary')),
+                clean_string(data.get('shift')),
+                member_id
+            ))
+        elif member_type == 'Patient':
+            shard_cursor.execute(f"""
+                INSERT INTO {get_shard_table_name('patient', shard_id)} 
+                (blood_group, gender, address, member_id)
+                VALUES (%s, %s, %s, %s)
+            """, (
+                clean_string(data.get('blood_group', 'Unknown')) or 'Unknown',
+                clean_string(data.get('gender', 'Other')) or 'Other',
+                clean_string(data.get('address')),
+                member_id
+            ))
+        elif member_type == 'Staff':
+            shard_cursor.execute(f"""
+                INSERT INTO {get_shard_table_name('nonmedicalstaff', shard_id)} 
+                (role, salary, shift, member_id)
+                VALUES (%s, %s, %s, %s)
+            """, (
+                clean_string(data.get('staff_role')),
+                int(data.get('salary')),
+                clean_string(data.get('shift')),
+                member_id
+            ))
+        
+        shard_conn.commit()
+        shard_cursor.close()
+        shard_conn.close()
+        
         log_action(request.user['username'], f"CREATED MEMBER (username: {username}, type: {member_type}, role: {role})")
-        return jsonify({"message": "Member created successfully via sharded system", "member_id": "sharded_id"}), 201
+        return jsonify({"message": "Member created successfully (hybrid: local + sharded)", "member_id": member_id}), 201
     except Exception as e:
+        conn.rollback()
         return jsonify({"error": f"Failed to create member: {str(e)}"}), 400
+    finally:
+        cursor.close()
+        conn.close()
 
 
 @admin_bp.route('/delete_member/<int:id>', methods=['DELETE'])
 @admin_required
 def delete_member(id):
+    # HYBRID: Delete from LOCAL DB first, then from REMOTE SHARDS
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
 
     try:
+        # Step 1: Get member info from LOCAL DB
         cursor.execute("SELECT member_id, name, member_type FROM member WHERE member_id = %s", (id,))
         member = cursor.fetchone()
         if not member:
             return jsonify({"error": "Member not found"}), 404
 
+        # Delete related appointments from LOCAL DB
         patient_id = None
         doctor_id = None
         if member['member_type'] == 'Patient':
@@ -195,11 +295,33 @@ def delete_member(id):
             cursor2.execute("DELETE FROM appointment WHERE doctor_id = %s", (doctor_id,))
         cursor.execute("DELETE FROM users WHERE member_id = %s", (id,))
         cursor.execute("DELETE FROM member WHERE member_id = %s", (id,))
-
         conn.commit()
         cursor2.close()
+        
+        # Step 2: Delete from REMOTE SHARDS
+        try:
+            from ..sharding import get_shard_connection, get_shard_table_name, get_shard_id
+            from ..config import get_shard_settings
+        except ImportError:
+            from sharding import get_shard_connection, get_shard_table_name, get_shard_id
+            from config import get_shard_settings
+        
+        shard_id = get_shard_id(id)
+        settings = get_shard_settings()
+        shard_conn = get_shard_connection(shard_id, settings["user"], settings["password"], settings["database"])
+        shard_cursor = shard_conn.cursor()
+        
+        # Delete from shards
+        shard_cursor.execute(f"DELETE FROM {get_shard_table_name('appointment', shard_id)} WHERE patient_id = %s", (patient_id,))
+        shard_cursor.execute(f"DELETE FROM {get_shard_table_name('appointment', shard_id)} WHERE doctor_id = %s", (doctor_id,))
+        shard_cursor.execute(f"DELETE FROM {get_shard_table_name('users', shard_id)} WHERE member_id = %s", (id,))
+        shard_cursor.execute(f"DELETE FROM {get_shard_table_name('member', shard_id)} WHERE member_id = %s", (id,))
+        shard_conn.commit()
+        shard_cursor.close()
+        shard_conn.close()
+        
         log_action(request.user['username'], f"DELETED MEMBER {id} (name: {member['name']})")
-        return jsonify({"message": f"Member {id} and all related records deleted successfully"}), 200
+        return jsonify({"message": f"Member {id} deleted from local and sharded DBs"}), 200
     except Exception as e:
         conn.rollback()
         return jsonify({"error": f"Deletion failed: {str(e)}"}), 400

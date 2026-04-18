@@ -8,32 +8,28 @@
     "patient1": {
       "username": "patient1",
       "password": "Patient1pass",
-      "member_id": 28,
-      "patient_id": 17
+      "member_id": null,
+      "patient_id": null
     },
     "patient2": {
       "username": "patient2",
       "password": "Patient2pass",
-      "member_id": 29,
-      "patient_id": 18
+      "member_id": null,
+      "patient_id": null
     }
   },
   "doctors": {
     "doctor1": {
       "username": "doctor1",
       "password": "Doctor1pass",
-      "member_id": 30,
-      "doctor_id": 6,
-      "slot_ids": [
-        11,
-        12,
-        13
-      ]
+      "member_id": null,
+      "doctor_id": null,
+      "slot_ids": []
     }
   },
   "race_test": {
-    "doctor_id": 6,
-    "slot_id": 11,
-    "date": "2026-04-06"
+    "doctor_id": null,
+    "slot_id": null,
+    "date": "2026-04-19"
   }
 }

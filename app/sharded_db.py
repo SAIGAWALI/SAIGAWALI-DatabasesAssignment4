@@ -132,14 +132,19 @@ class ShardedDBLayer:
             return None
     
     def get_all_doctors(self):
-        """Get all doctors from all shards."""
+        """Get all doctors from all shards with doctor names."""
         doctors = []
         for shard_id in range(NUM_SHARDS):
             try:
                 conn = get_shard_connection(shard_id, self.username, self.password, self.database)
                 cursor = conn.cursor(dictionary=True)
                 cursor.execute(f"""
-                    SELECT * FROM {get_shard_table_name('doctor', shard_id)}
+                    SELECT 
+                        d.doctor_id, d.member_id, d.specialization, d.qualification,
+                        d.consultation_fee, d.salary, d.shift,
+                        m.name as doctor_name, m.email, m.contact_no
+                    FROM {get_shard_table_name('doctor', shard_id)} d
+                    LEFT JOIN {get_shard_table_name('member', shard_id)} m ON d.member_id = m.member_id
                 """)
                 shard_doctors = cursor.fetchall()
                 doctors.extend(shard_doctors)
@@ -149,6 +154,149 @@ class ShardedDBLayer:
                 print(f"Warning: Error fetching doctors from shard {shard_id}: {str(e)}")
         
         return sorted(doctors, key=lambda x: x['doctor_id'])
+    
+    def get_doctor_by_member_id(self, member_id):
+        """Get doctor by member_id (for cross-shard lookups)."""
+        doctor_shard_id = get_shard_id(member_id)
+        try:
+            conn = get_shard_connection(doctor_shard_id, self.username, self.password, self.database)
+            cursor = conn.cursor(dictionary=True)
+            cursor.execute(f"""
+                SELECT 
+                    d.doctor_id, d.member_id, d.specialization, d.qualification,
+                    d.consultation_fee, d.salary, d.shift,
+                    m.name as doctor_name, m.email, m.contact_no
+                FROM {get_shard_table_name('doctor', doctor_shard_id)} d
+                LEFT JOIN {get_shard_table_name('member', doctor_shard_id)} m ON d.member_id = m.member_id
+                WHERE d.member_id = %s
+            """, (member_id,))
+            doctor = cursor.fetchone()
+            cursor.close()
+            conn.close()
+            return doctor
+        except Exception as e:
+            print(f"Error fetching doctor by member_id {member_id}: {str(e)}")
+            return None
+    
+    def get_doctor_by_member_id(self, member_id):
+        """Get doctor by member_id (for cross-shard lookups)."""
+        doctor_shard_id = get_shard_id(member_id)
+        try:
+            conn = get_shard_connection(doctor_shard_id, self.username, self.password, self.database)
+            cursor = conn.cursor(dictionary=True)
+            cursor.execute(f"""
+                SELECT 
+                    d.doctor_id, d.member_id, d.specialization, d.qualification,
+                    d.consultation_fee, d.salary, d.shift,
+                    m.name as doctor_name, m.email, m.contact_no
+                FROM {get_shard_table_name('doctor', doctor_shard_id)} d
+                LEFT JOIN {get_shard_table_name('member', doctor_shard_id)} m ON d.member_id = m.member_id
+                WHERE d.member_id = %s
+            """, (member_id,))
+            doctor = cursor.fetchone()
+            cursor.close()
+            conn.close()
+            return doctor
+        except Exception as e:
+            print(f"Error fetching doctor by member_id {member_id}: {str(e)}")
+            return None
+    
+    def get_patient_by_member_id(self, member_id):
+        """Get patient by member_id (for cross-shard lookups)."""
+        patient_shard_id = get_shard_id(member_id)
+        try:
+            conn = get_shard_connection(patient_shard_id, self.username, self.password, self.database)
+            cursor = conn.cursor(dictionary=True)
+            cursor.execute(f"""
+                SELECT 
+                    p.patient_id, p.member_id, p.disease_history, p.allergies,
+                    m.name as patient_name, m.email, m.contact_no
+                FROM {get_shard_table_name('patient', patient_shard_id)} p
+                LEFT JOIN {get_shard_table_name('member', patient_shard_id)} m ON p.member_id = m.member_id
+                WHERE p.member_id = %s
+            """, (member_id,))
+            patient = cursor.fetchone()
+            cursor.close()
+            conn.close()
+            return patient
+        except Exception as e:
+            print(f"Error fetching patient by member_id {member_id}: {str(e)}")
+            return None
+    
+    def get_all_medicines(self):
+        """Get all medicines with quantity from LOCAL DB + Shards."""
+        medicines = []
+        
+        # Get from LOCAL DB (with inventory join)
+        try:
+            import mysql.connector
+            from .config import get_db_settings
+            
+            db_settings = get_db_settings()
+            local_conn = mysql.connector.connect(
+                host=db_settings['host'],
+                user=db_settings['user'],
+                password=db_settings['password'],
+                database=db_settings['database']
+            )
+            local_cursor = local_conn.cursor(dictionary=True)
+            local_cursor.execute("""
+                SELECT 
+                    m.medicine_id, m.medicine_name, m.manufacturer, m.price, m.category,
+                    COALESCE(SUM(i.quantity), 0) as quantity,
+                    MAX(i.manufacturing_date) as manufacturing_date, 
+                    MAX(i.expiry_date) as expiry_date
+                FROM medicine m
+                LEFT JOIN inventory i ON m.medicine_id = i.medicine_id
+                GROUP BY m.medicine_id
+            """)
+            local_medicines = local_cursor.fetchall()
+            medicines.extend(local_medicines)
+            print(f"[DEBUG] Fetched {len(local_medicines)} medicines from LOCAL DB with inventory")
+            local_cursor.close()
+            local_conn.close()
+        except Exception as e:
+            print(f"Warning: Could not fetch medicines from LOCAL DB: {str(e)}")
+        
+        # Also get from Shard 0 (replicated)
+        for shard_id in range(NUM_SHARDS):
+            try:
+                conn = get_shard_connection(shard_id, self.username, self.password, self.database)
+                cursor = conn.cursor(dictionary=True)
+                table_name = get_shard_table_name('medicine', shard_id)
+                
+                # Only query from shard 0 (replicated)
+                if shard_id == 0:
+                    cursor.execute(f"""
+                        SELECT 
+                            m.medicine_id, m.medicine_name, m.manufacturer, m.price, m.category,
+                            COALESCE(SUM(i.quantity), 0) as quantity,
+                            MAX(i.manufacturing_date) as manufacturing_date, 
+                            MAX(i.expiry_date) as expiry_date
+                        FROM {table_name} m
+                        LEFT JOIN {get_shard_table_name('inventory', shard_id)} i ON m.medicine_id = i.medicine_id
+                        GROUP BY m.medicine_id
+                    """)
+                    shard_medicines = cursor.fetchall()
+                    print(f"[DEBUG] Fetched {len(shard_medicines)} medicines from Shard 0 with inventory")
+                    medicines.extend(shard_medicines)
+                
+                cursor.close()
+                conn.close()
+            except Exception as e:
+                print(f"Warning: Could not fetch medicines from shard {shard_id}: {str(e)}")
+        
+        # Remove duplicates and sort
+        seen = set()
+        unique_medicines = []
+        for med in medicines:
+            med_id = med.get('medicine_id')
+            if med_id not in seen:
+                seen.add(med_id)
+                unique_medicines.append(med)
+        
+        print(f"[DEBUG] Total unique medicines with quantity returned: {len(unique_medicines)}")
+        return sorted(unique_medicines, key=lambda x: x['medicine_id'])
     
     def insert_doctor(self, doctor_data):
         """Insert doctor - routes to shard of member_id."""
