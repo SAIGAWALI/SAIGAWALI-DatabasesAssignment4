@@ -277,11 +277,7 @@ This project uses **3 Docker containers** running independent MySQL database ins
 - Shard 1 (2cffc9b7df77): 10.0.116.184:3308
 - Shard 2 (5629a0278cb0): 10.0.116.184:3309
 
-**Why Docker?** Assignment SubTask 2 specifies two approaches; we chose Docker because it:
-- Simulates real distributed systems (production microservices architecture)
-- Provides true fault isolation (container failure ≠ shard failure)
-- Better represents cloud deployment patterns
-- Was provided by assignment infrastructure after April 11
+
 
 ### Configuration
 All database credentials and connection details are stored in `.env` file (kept private):
@@ -413,22 +409,6 @@ python env_config.py
 ```bash
 tail -f logs/app.log
 ```
-
----
-
-## ✅ Checklist for Submission
-
-- [x] Shard key selected and justified (Member ID)
-- [x] Data partitioned across 3 shards (17 members)
-- [x] Query routing implemented (ShardedDBLayer)
-- [x] Scalability analyzed (CAP theorem)
-- [x] Code production-ready (1,100+ lines)
-- [x] Data migration verified (zero loss)
-- [x] Report with actual data (REPORT_TEMPLATE.tex)
-- [x] Flask website operational
-- [x] README complete and comprehensive
-- [x] Video demo script ready (VIDEO_DEMO_SCRIPT.tex)
-
 ---
 
 ## Running the Application
