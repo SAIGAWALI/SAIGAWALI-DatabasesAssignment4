@@ -1,0 +1,1400 @@
+[
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=9 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384621.9080212
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=5 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.1110668
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=10 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.1427894
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=4 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.4117808
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=3 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.4784865
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=11 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.4876378
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=7 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.501743
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=14 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.516997
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=6 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.5240602
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=1 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.5323155
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=12 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.534951
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=13 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.5407956
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=2 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.5492353
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=0 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.563397
+  },
+  {
+    "test": "race_condition_booking",
+    "status": 409,
+    "extra": "thread=8 body={\n  \"error\": \"This slot is already booked for the selected doctor and date\"\n}\n",
+    "ts": 1775384622.5726397
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=4 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=7 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=0 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=1 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=3 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=2 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.7585196
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=9 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.773605
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 201,
+    "extra": "thread=6 user=concuser_1775384622 body={\n  \"member_id\": 76,\n  \"message\": \"Member created successfully\"\n}\n",
+    "ts": 1775384625.773605
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=5 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.8451736
+  },
+  {
+    "test": "concurrent_member_create",
+    "status": 400,
+    "extra": "thread=8 user=concuser_1775384622 body={\n  \"error\": \"Failed to create member: 1062 (23000): Duplicate entry 'concuser_1775384622' for key 'users.username'\"\n}\n",
+    "ts": 1775384625.860876
+  },
+  {
+    "test": "isolation_portfolio",
+    "status": 403,
+    "extra": "patient1 accessing patient2 portfolio: {\n  \"error\": \"Access denied\"\n}\n",
+    "ts": 1775384628.0012267
+  },
+  {
+    "test": "failure_simulation",
+    "status": 400,
+    "extra": "missing_fields_add_member: {\n  \"error\": \"Missing required fields\"\n}\n",
+    "ts": 1775384630.0622547
+  },
+  {
+    "test": "failure_simulation",
+    "status": 400,
+    "extra": "invalid_age_add_member: {\n  \"error\": \"Age must be between 1 and 120\"\n}\n",
+    "ts": 1775384632.1145961
+  },
+  {
+    "test": "failure_simulation",
+    "status": 400,
+    "extra": "bad_medicine_missing: {\n  \"error\": \"Missing required fields\"\n}\n",
+    "ts": 1775384634.1511064
+  },
+  {
+    "test": "failure_simulation",
+    "status": 400,
+    "extra": "appointment_missing_fields: {\n  \"error\": \"Missing required fields\"\n}\n",
+    "ts": 1775384636.1663954
+  },
+  {
+    "test": "rollback_first_insert",
+    "status": 201,
+    "extra": "{\n  \"member_id\": 86,\n  \"message\": \"Member created successfully\"\n}\n",
+    "ts": 1775384638.6227725
+  },
+  {
+    "test": "rollback_dup_insert",
+    "status": 409,
+    "extra": "{\n  \"error\": \"Email already registered\"\n}\n",
+    "ts": 1775384642.878666
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.5996768
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.619873
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.7192235
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.7384815
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.7384815
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.8412175
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.9141097
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.9190626
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384647.9885461
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.0540617
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.1147728
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.1355662
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.362395
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.4127836
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.5214176
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.586056
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.586056
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.8838284
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384648.98392
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.0884566
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.145092
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.17072
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.1966133
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.2216706
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2699053
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.2856746
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3014438
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": -1,
+    "extra": "HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /medicines (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+    "ts": 1775384649.3170571
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.383697
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.4872804
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.5275683
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.5997195
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.624991
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.7107992
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.790996
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.8195977
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.8440366
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384649.892322
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.0614355
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.0728757
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.1523862
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.220598
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.3883164
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.4145896
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.422747
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.4406664
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.5350382
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.586028
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.6151597
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.6496549
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.6601055
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.757335
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384650.8997712
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.0032508
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.1537814
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.2610922
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.2692213
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.3660955
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.4074583
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.4074583
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.457428
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.4948199
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.497328
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.6235402
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.7216473
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.8504782
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.8900678
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384651.8900678
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.1283915
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.2175896
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.267243
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.333797
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.4108684
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.5108085
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.553105
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.7195106
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.7526362
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.7526362
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384652.8572152
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.0144928
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.0294921
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.0294921
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.0460136
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.0717292
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.2949247
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.3616123
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.509773
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.744254
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384653.832206
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.0440848
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.0463765
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.0859714
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.1950774
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.2017572
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.3254218
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.328156
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.328156
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.3336995
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.366568
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.4082277
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.4113443
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.4440076
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.5728335
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384654.9311144
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.0765388
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.121273
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.1779418
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.227667
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.3272498
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.3272498
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.359178
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.359178
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.3751519
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.5748956
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.5782526
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.5782526
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.8578072
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.9247355
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.9247355
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.9612336
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.9668696
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384655.9998622
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.064651
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.1384144
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.1982727
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.2440004
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.2724
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.3019166
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.6107306
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.734335
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.734335
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.7875047
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.8759122
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.9001577
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384656.9333298
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.010655
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.1042972
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.166592
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.1762252
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.1762252
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.1820774
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.184711
+  },
+  {
+    "test": "stress_get_medicines",
+    "status": 200,
+    "extra": "",
+    "ts": 1775384657.184711
+  },
+  {
+    "test": "stress_get_medicines_threshold",
+    "status": 0,
+    "extra": "success_rate=69.5 threshold=85",
+    "ts": 1775384657.184711
+  }
+]
