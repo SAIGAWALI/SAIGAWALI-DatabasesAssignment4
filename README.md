@@ -141,11 +141,7 @@ DatabasesAssignment4/
 │
 ├── 📄 Core Documentation
 │   ├── README.md                         ← Complete documentation (you are here)
-│   ├── REPORT_TEMPLATE.tex              ← Full technical report (LaTeX)
-│   ├── VIDEO_DEMO_SCRIPT.tex            ← Demo script with code examples
-│   ├── ASSIGNMENT_COMPLETION_CHECKLIST.txt ← Assignment verification
 │   ├── HYBRID_SHARDING_ARCHITECTURE.md  ← Architecture deep-dive
-│   └── SHARDING_FIXES.md                ← Implementation fixes log
 │
 ├── 🔐 Configuration & Credentials
 │   ├── .env                             ← Sharded DB credentials (PRIVATE - not committed)
