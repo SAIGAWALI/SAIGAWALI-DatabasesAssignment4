@@ -249,17 +249,3 @@ This HYBRID approach provides:
 ✅ **Simplicity**: Auth layer doesn't require shard routing  
 ✅ **Redundancy**: Member data exists in both local (for reference) and shards (for distribution)  
 ✅ **Production-Ready**: Realistic architecture used by many companies
-
----
-
-## How This Differs from Pure Sharding
-
-| Aspect | Hybrid (Current) | Pure Sharding |
-|--------|------------------|---------------|
-| **Auth DB** | Local | Remote shard |
-| **Audit Log** | Local | Replicated across shards |
-| **Member Info** | Local + Shard | Shard only |
-| **Complexity** | Medium (2 DBs) | Low (1 DB system) |
-| **Realism** | High ✅ | Medium |
-| **Assignment Fit** | Both ✅ | Both ✅ |
-
